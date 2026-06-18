@@ -30,8 +30,7 @@ Patients with CHD had average cholesterol levels approximately 11.22 mg/dL highe
 Exploratory analysis found that diabetes produced the largest proportional difference between patients with and without CHD, making it one of the most important risk factors in the dataset.
 
 Technologies:
-R
-RStudio
+R, RStudio
 
 Team Size:
 Team of 4
