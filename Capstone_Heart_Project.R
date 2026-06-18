@@ -2,7 +2,8 @@
 heart_data <- read.csv("Framingham.csv")
 
 #Create subset
-heart_data_new <- heart_data[,c(2:5,7,9:10,13,28)]
+keep_columns <- c("SEX", "CURSMOKE", "DIABETES", "ANYCHD", "AGE", "TOTCHOL", "SYSBP", "BMI", "GLUCOSE")
+heart_data_new <- heart_data[, keep_columns]
 heart_data_clean <- na.omit(heart_data_new)
 
 #Describe character variables
@@ -39,11 +40,11 @@ hist(heart_data_clean$GLUCOSE,main="Distribution of Glucose for Participants",xl
 boxplot(heart_data_clean$GLUCOSE,main="Distribution of Glucose for Participants",ylab="Glucose",col="grey",horizontal = TRUE)
 
 #Task 7: Side by Side boxplots for key variables
-boxplot(AGE ~ heart_data_clean$anychd_label, data = heart_data_clean,main="Distribution of Age in anychd_label Dataset",ylab="Age",col="pink",horizontal = TRUE)
-boxplot(TOTCHOL ~ heart_data_clean$anychd_label, data = heart_data_clean,main="Distribution of Cholesterol in anychd_label Dataset",ylab="Age",col="pink",horizontal = TRUE)
-boxplot(SYSBP ~ heart_data_clean$anychd_label, data = heart_data_clean,main="Distribution of Blood Pressure in anychd_label Dataset",ylab="Age",col="pink",horizontal = TRUE)
-boxplot(BMI ~ heart_data_clean$anychd_label, data = heart_data_clean,main="Distribution of BMI in anychd_label Dataset",ylab="Age",col="pink",horizontal = TRUE)
-boxplot(GLUCOSE ~ heart_data_clean$anychd_label,data = heart_data_clean,main="Distribution of GLUCOSE in anychd_label Dataset",ylab="Age",col="pink",horizontal = TRUE)
+boxplot(AGE ~ anychd_label, data = heart_data_clean,main="Distribution of Age in anychd_label Dataset",ylab="Age",col="pink",horizontal = TRUE)
+boxplot(TOTCHOL ~ anychd_label, data = heart_data_clean,main="Distribution of http://127.0.0.1:27401/graphics/983f36a4-a6fd-4a90-9052-bfa9a21c3594.pngCholesterol in anychd_label Dataset",ylab="Age",col="pink",horizontal = TRUE)
+boxplot(SYSBP ~ anychd_label, data = heart_data_clean,main="Distribution of Blood Pressure in anychd_label Dataset",ylab="Age",col="pink",horizontal = TRUE)
+boxplot(BMI ~ anychd_label, data = heart_data_clean,main="Distribution of BMI in anychd_label Dataset",ylab="Age",col="pink",horizontal = TRUE)
+boxplot(GLUCOSE ~ anychd_label,data = heart_data_clean,main="Distribution of GLUCOSE in anychd_label Dataset",ylab="Age",col="pink",horizontal = TRUE)
 
 #Task 8: Stacked bar charts to visualize anychd_label
 sex_table <- table(heart_data_clean$sex_label,heart_data_clean$anychd_label)
