@@ -13,13 +13,7 @@ Dataset:
 The Framingham Heart Study dataset contains 11,627 patient observations and 39 demographic, behavioral, and clinical variables related to cardiovascular health.
 
 Methods:
-Data cleaning
-Exploratory Data Analysis (EDA)
-t-tests
-Chi-square tests
-Linear Probability Models
-Multiple regression
-Results
+Data cleaning, Exploratory Data Analysis (EDA), t-tests, Chi-square tests, Linear Probability Models, Multiple regression
 
 Key Findings:
 1. Systolic blood pressure was the strongest predictor of coronary heart disease (CHD).
