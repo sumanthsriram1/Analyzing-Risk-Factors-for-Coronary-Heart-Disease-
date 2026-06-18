@@ -1,5 +1,5 @@
 #Load in heart data
-heart_data <- read.csv("C:/Users/ICSSA Student/Desktop/Framingham.csv")
+heart_data <- read.csv("Framingham.csv")
 
 #Create subset
 heart_data_new <- heart_data[,c(2:5,7,9:10,13,28)]
